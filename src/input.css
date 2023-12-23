@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+@layer base {
+	html {
+		font-family: "Poppins", sans-serif;
+	}
+}
+
+@layer components {
+	.nav-link {
+		@apply fixed w-full -top-[100%] left-0 flex justify-center items-center flex-col p-16 gap-y-10 shadow-lg text-dark font-semibold text-sm overflow-hidden transition-all duration-[0.3s] ease-in-out bg-white;
+	}
+}
+
+.show-nav-link {
+	@apply top-0;
+}
+
+.show-search {
+	opacity: 1;
+	pointer-events: initial;
+}
+
+.show-search div {
+	transform: translateY(0);
+}

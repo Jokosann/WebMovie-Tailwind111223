@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./dist/output.css" />
+		<title>web-movie</title>
+	</head>
+	<body>
+		<!-- hearder -->
+		<header class="w-full fixed top-0 left-0 shadow-2xl bg-primary">
+			<nav class="container">
+				<div class="flex justify-between items-center h-[3.5rem] md:h-[4rem]">
+					<!-- logo -->
+					<div class="flex items-center">
+						<img class="sm:w-[200px]" src="./src/images/logo-layarkaca21.svg" alt="logo" />
+					</div>
+					<!-- nav-menu -->
+					<div class="md:block">
+						<ul
+							class="nav-link md:flex md:items-center md:relative md:bg-transparent md:flex-row md:p-0 md:shadow-none md:transition-none md:gap-x-4 md:text-white md:font-normal md:text-sm md:tracking-wide"
+							id="nav-link"
+						>
+							<!-- close nav -->
+							<i
+								class="ri-close-line md:hidden absolute top-5 right-9 text-2xl"
+								id="close-nav-link"
+							></i>
+							<!-- nav-menu -->
+							<li>
+								<a href="#" class="hover:text-dark transition-all">Series</a>
+							</li>
+							<li>
+								<a href="#" class="hover:text-dark transition-all">Genre</a>
+							</li>
+							<li>
+								<a href="#" class="hover:text-dark transition-all">Populer</a>
+							</li>
+							<li>
+								<a href="#" class="hover:text-dark transition-all">Contact Us</a>
+							</li>
+						</ul>
+					</div>
+					<!-- click -->
+					<div class="flex gap-x-4 items-center col text-white">
+						<!-- search -->
+						<i class="ri-search-line cursor-pointer" id="search-menu"></i>
+						<!-- login -->
+						<button
+							class="bg-white text-primary px-3 py-1 rounded-full tracking-wide hidden hover:text-dark transition-all sm:text-sm md:text-sm sm:block"
+						>
+							<i class="ri-user-line sm:text-sm md:text-sm"></i>
+							Login
+						</button>
+						<!-- login < sm -->
+						<i class="ri-user-line sm:hidden"></i>
+						<!-- hamburger -->
+						<i
+							class="ri-menu-line text-xl cursor-pointer transition-all md:hidden"
+							id="hamburger"
+						></i>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!-- search -->
+		<div
+			class="fixed z-[999] top-0 left-0 w-full h-full bg-transparent backdrop-blur-xl flex flex-col items-center pt-28 opacity-0 pointer-events-none transition-all duration-[0.4s]"
+			id="search-container"
+		>
+			<!-- search menu -->
+			<div
+				class="flex gap-y-2 px-4 shadow-md bg-white rounded-[20px] w-72 -translate-y-2 transition-all duration-[0.4s]"
+			>
+				<!-- search icon -->
+				<div class="flex items-center">
+					<i class="ri-search-line text-xl text-dark"></i>
+				</div>
+				<!-- input search -->
+				<input
+					type="search"
+					class="bg-white w-full px-4 py-2 outline-none text-base placeholder:text-base text-dark placeholder:italic"
+					name=""
+					id="search"
+					autocomplete="off"
+					placeholder="Search Movie..."
+				/>
+			</div>
+			<!-- close search -->
+			<i
+				class="ri-close-line cursor-pointer absolute top-12 text-2xl text-slate-800"
+				id="search-close"
+			></i>
+		</div>
+
+		<!-- card movie -->
+		<section class="container py-24">
+			<div
+				class="grid x:grid-cols-2 grid-cols-[290px] justify-center xs:grid-cols-2 md:grid-cols-4 sm:grid-cols-3 gap-y-5 gap-x-4"
+				id="card-container"
+			></div>
+		</section>
+
+		<!-- modal card movie -->
+		<div
+			class="fixed top-0 left-0 w-full h-full bg-darkOpacity hidden"
+			id="modal-card-container"
+		></div>
+
+		<script type="module" src="./script.js"></script>
+	</body>
+</html>
